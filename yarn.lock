@@ -3056,48 +3056,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"HelloWorld@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "HelloWorld@workspace:."
-  dependencies:
-    "@babel/core": ^7.25.2
-    "@babel/preset-env": ^7.25.3
-    "@babel/runtime": ^7.25.0
-    "@react-native-community/cli": 15.0.1
-    "@react-native-community/cli-platform-android": 15.0.1
-    "@react-native-community/cli-platform-ios": 15.0.1
-    "@react-native/babel-preset": 0.76.3
-    "@react-native/eslint-config": 0.76.3
-    "@react-native/metro-config": 0.76.3
-    "@react-native/typescript-config": 0.76.3
-    "@react-navigation/bottom-tabs": ^7.0.4
-    "@react-navigation/drawer": 7.0.6
-    "@react-navigation/elements": 2.1.0
-    "@react-navigation/native": 7.0.3
-    "@react-navigation/native-stack": ^7.1.0
-    "@react-navigation/stack": ^7.0.3
-    "@reduxjs/toolkit": ^2.3.0
-    "@types/react": ^18.2.6
-    "@types/react-native-vector-icons": ^6.4.18
-    "@types/react-test-renderer": ^18.0.0
-    babel-jest: ^29.6.3
-    eslint: ^8.19.0
-    jest: ^29.6.3
-    prettier: 2.8.8
-    react: 18.3.1
-    react-native: 0.76.3
-    react-native-gesture-handler: ^2.21.2
-    react-native-reanimated: 3.9.0
-    react-native-safe-area-context: 4.10.5
-    react-native-screens: ^4.3.0
-    react-redux: ^9.1.2
-    react-test-renderer: 18.3.1
-    recompose: ^0.30.0
-    redux-persist: ^6.0.0
-    typescript: 5.0.4
-  languageName: unknown
-  linkType: soft
-
 "abbrev@npm:^2.0.0":
   version: 2.0.0
   resolution: "abbrev@npm:2.0.0"
@@ -4341,6 +4299,48 @@ __metadata:
   checksum: fd7673ca77fe26cd5cba38d816bc72d641f500f1f9b25b83e8ce28827fe2da7ad583a8da26ab6af85f834138cf8dae9f69b0cd6ab925f52ddab1754db44d99ce
   languageName: node
   linkType: hard
+
+"dt-react-native@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "dt-react-native@workspace:."
+  dependencies:
+    "@babel/core": ^7.25.2
+    "@babel/preset-env": ^7.25.3
+    "@babel/runtime": ^7.25.0
+    "@react-native-community/cli": 15.0.1
+    "@react-native-community/cli-platform-android": 15.0.1
+    "@react-native-community/cli-platform-ios": 15.0.1
+    "@react-native/babel-preset": 0.76.3
+    "@react-native/eslint-config": 0.76.3
+    "@react-native/metro-config": 0.76.3
+    "@react-native/typescript-config": 0.76.3
+    "@react-navigation/bottom-tabs": ^7.0.4
+    "@react-navigation/drawer": 7.0.6
+    "@react-navigation/elements": 2.1.0
+    "@react-navigation/native": 7.0.3
+    "@react-navigation/native-stack": ^7.1.0
+    "@react-navigation/stack": ^7.0.3
+    "@reduxjs/toolkit": ^2.3.0
+    "@types/react": ^18.2.6
+    "@types/react-native-vector-icons": ^6.4.18
+    "@types/react-test-renderer": ^18.0.0
+    babel-jest: ^29.6.3
+    eslint: ^8.19.0
+    jest: ^29.6.3
+    prettier: 2.8.8
+    react: 18.3.1
+    react-native: 0.76.3
+    react-native-gesture-handler: ^2.21.2
+    react-native-reanimated: 3.9.0
+    react-native-safe-area-context: 4.10.5
+    react-native-screens: ^4.3.0
+    react-redux: ^9.1.2
+    react-test-renderer: 18.3.1
+    recompose: ^0.30.0
+    redux-persist: ^6.0.0
+    typescript: 5.0.4
+  languageName: unknown
+  linkType: soft
 
 "eastasianwidth@npm:^0.2.0":
   version: 0.2.0
