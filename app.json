@@ -1,4 +1,7 @@
 {
   "name": "DtReactNative",
-  "displayName": "DtReactNative"
+  "displayName": "DtReactNative",
+  "ios": {
+    "bundleIdentifier": "com.datt.DtReactNative"
+  }
 }
