@@ -726,7 +726,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-class-properties@npm:^7.25.4, @babel/plugin-transform-class-properties@npm:^7.25.9":
+"@babel/plugin-transform-class-properties@npm:^7.0.0-0, @babel/plugin-transform-class-properties@npm:^7.25.4, @babel/plugin-transform-class-properties@npm:^7.25.9":
   version: 7.25.9
   resolution: "@babel/plugin-transform-class-properties@npm:7.25.9"
   dependencies:
@@ -750,7 +750,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-classes@npm:^7.25.4, @babel/plugin-transform-classes@npm:^7.25.9":
+"@babel/plugin-transform-classes@npm:^7.0.0-0, @babel/plugin-transform-classes@npm:^7.25.4, @babel/plugin-transform-classes@npm:^7.25.9":
   version: 7.25.9
   resolution: "@babel/plugin-transform-classes@npm:7.25.9"
   dependencies:
@@ -1323,7 +1323,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-unicode-regex@npm:^7.24.7, @babel/plugin-transform-unicode-regex@npm:^7.25.9":
+"@babel/plugin-transform-unicode-regex@npm:^7.0.0-0, @babel/plugin-transform-unicode-regex@npm:^7.24.7, @babel/plugin-transform-unicode-regex@npm:^7.25.9":
   version: 7.25.9
   resolution: "@babel/plugin-transform-unicode-regex@npm:7.25.9"
   dependencies:
@@ -4330,10 +4330,10 @@ __metadata:
     prettier: 2.8.8
     react: 18.3.1
     react-native: 0.76.3
-    react-native-gesture-handler: ^2.21.2
-    react-native-reanimated: 3.9.0
-    react-native-safe-area-context: 4.10.5
-    react-native-screens: ^4.3.0
+    react-native-gesture-handler: ~2.20.2
+    react-native-reanimated: ~3.16.1
+    react-native-safe-area-context: 4.12.0
+    react-native-screens: ~4.1.0
     react-redux: ^9.1.2
     react-test-renderer: 18.3.1
     recompose: ^0.30.0
@@ -8224,9 +8224,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-gesture-handler@npm:^2.21.2":
-  version: 2.21.2
-  resolution: "react-native-gesture-handler@npm:2.21.2"
+"react-native-gesture-handler@npm:~2.20.2":
+  version: 2.20.2
+  resolution: "react-native-gesture-handler@npm:2.20.2"
   dependencies:
     "@egjs/hammerjs": ^2.0.17
     hoist-non-react-statics: ^3.3.0
@@ -8235,19 +8235,22 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 0a42cedb8860a326b465085d0f7622ba03f038b0f0bdd1b1fe5703e58d62cb08bfb82a686c069a1a1410705c2ae0d82971b0449d83796fdd6d071131cf88e68b
+  checksum: 8d9e7496615dad4e6bb6dd1c750c2d3b2e57c6173a1d466b4503b28b159b1dbbb1e7527c3d4bda12324422200c07835f34d81c9bd3cd1b7f594b22949bef274a
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:3.9.0":
-  version: 3.9.0
-  resolution: "react-native-reanimated@npm:3.9.0"
+"react-native-reanimated@npm:~3.16.1":
+  version: 3.16.2
+  resolution: "react-native-reanimated@npm:3.16.2"
   dependencies:
     "@babel/plugin-transform-arrow-functions": ^7.0.0-0
+    "@babel/plugin-transform-class-properties": ^7.0.0-0
+    "@babel/plugin-transform-classes": ^7.0.0-0
     "@babel/plugin-transform-nullish-coalescing-operator": ^7.0.0-0
     "@babel/plugin-transform-optional-chaining": ^7.0.0-0
     "@babel/plugin-transform-shorthand-properties": ^7.0.0-0
     "@babel/plugin-transform-template-literals": ^7.0.0-0
+    "@babel/plugin-transform-unicode-regex": ^7.0.0-0
     "@babel/preset-typescript": ^7.16.7
     convert-source-map: ^2.0.0
     invariant: ^2.2.4
@@ -8255,30 +8258,30 @@ __metadata:
     "@babel/core": ^7.0.0-0
     react: "*"
     react-native: "*"
-  checksum: 95b5d5e4e7a988696765d90fe62a331a50d3fd7c05e2f3733525e226554f5b69a4afc2b9c148682ec98eaf933d21e82a99aaf07b069504edd0968c4838215620
+  checksum: 30d579a8cbc761395232ab8a971bef1b4d7819d73fb53ae1fd9bb550b8a9fbaad9e51082f38beb3feb14c63e12cd96bfc14349a17e490f853d0beed98f74d286
   languageName: node
   linkType: hard
 
-"react-native-safe-area-context@npm:4.10.5":
-  version: 4.10.5
-  resolution: "react-native-safe-area-context@npm:4.10.5"
+"react-native-safe-area-context@npm:4.12.0":
+  version: 4.12.0
+  resolution: "react-native-safe-area-context@npm:4.12.0"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 94e049a5579e8cbe6d08a6da89efc948ff20042c7c08670341ec3629752fa40d0b1f14471860a18fdfc121fbdee1b58d582704f3fd2dc612890a0bd002f908a1
+  checksum: 04a751afed448b31dc401f0e8ecf9cf3edc4fe77b5c16cb7bc2a70381c3a2ffa54f42a313a46ad7deec0aff74a3f5650cf49db0264ba4a6c4f6a1d69ecf489fd
   languageName: node
   linkType: hard
 
-"react-native-screens@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "react-native-screens@npm:4.3.0"
+"react-native-screens@npm:~4.1.0":
+  version: 4.1.0
+  resolution: "react-native-screens@npm:4.1.0"
   dependencies:
     react-freeze: ^1.0.0
     warn-once: ^0.1.0
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: b43ae4145e264582732ec53c78ba88de678c8ce7f9687b0526bf647c7d1ea8311ee821945848a55fb04f145bf8cae189d2d4e0f49e52571cb23acf083f2df858
+  checksum: 70a1c522b000758ca066b30062b7902c3df15ee5d1bccc4e59901d207e278cb6852f7c883a5df5c93f1415fd4089de2d4261e3f3a7cd5150c1aad8674193c728
   languageName: node
   linkType: hard
 

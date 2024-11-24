@@ -18,8 +18,8 @@ The useful template for Mobile apps, inspired by React Native, inspired by React
 - Integrate the React Native code in your application so that your iOS files can import the React Native headers.
 
   ```bash
-    bundle install
-    bundle exec pod install
+  bundle install
+  bundle exec pod install
   ```
 
 - Run iOS
