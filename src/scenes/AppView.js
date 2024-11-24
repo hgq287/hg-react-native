@@ -1,29 +1,9 @@
-import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-
-import { colors, fonts } from '../styles'; 
+import React from 'react'; 
+import HomeScreen from '../scenes/home/HomeViewContainer';
 
 export default function AppView() {
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.titleText}>Hi, Hg Q.</Text>
-    </View>
+    <HomeScreen />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#333',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  titleText: {
-    alignItems: 'center',
-    color: colors.primary,
-    fontFamily: fonts.primaryRegular,
-    fontSize: 40,
-    marginVertical: 3,
-  },
-});
