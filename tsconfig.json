@@ -52,25 +52,6 @@
 
     "baseUrl": "./",                          /* Base directory to resolve non-absolute module names. */
     "paths": {
-      // "@*": ["src/*"],
-      // "@assets/*": [
-      //   "assets/*"
-      // ],
-      // "@i18n/*": [
-      //   "src/i18n/*"
-      // ],
-      // "@scenes/*": [
-      //   "src/scenes/*"
-      // ],
-      // "@components/*": [
-      //   "src/components/*"
-      // ],
-      // "@styles/*": [
-      //   "src/styles/*"
-      // ],
-      // "@vendors/*": [
-      //   "vendors/*"
-      // ]
     }
   },
   "exclude": [
