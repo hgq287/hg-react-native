@@ -11,6 +11,8 @@ import {
 import {Formik} from 'formik';
 import * as Yup from 'yup';
 
+  import { colors } from '../../styles';
+
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import {useDispatch} from 'react-redux';
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     height: 50,
-    backgroundColor: '#1E90FF',
+    backgroundColor: colors.primary,
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',

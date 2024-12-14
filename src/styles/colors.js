@@ -1,7 +1,6 @@
 const appColors = {
-  primary: '#555CC4',
-  primaryLight: '#829BF8',
-  secondary: '#FF1358',
+  primary: '#bb873e',
+  secondary: '#f6e5d4',
   grey: '#acacac',
   gray: '#5f5f5f',
   darkGray: '#4d4d4d',

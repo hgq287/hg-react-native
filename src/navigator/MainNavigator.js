@@ -36,13 +36,14 @@ function MainNavigator(props) {
           component={item.component}
           initialParams={props.route.params ?? {}}
           options={{
-          tabBarIcon: ({ focused }) => (
-            <View style={styles.container}>
-              {item.icon}
-            </View>
-          ),
-          tabBarLabel: ({ focused }) => <Text style={{ fontSize: 12, color: focused ? colors.primary : colors.gray }}>{item.name}</Text>,
-        }}
+            backgroundColor: colors.secondary,
+            tabBarIcon: ({ focused }) => (
+              <View style={styles.container}>
+                {item.icon}
+              </View>
+            ),
+            tabBarLabel: ({ focused }) => <Text style={{ fontSize: 12, color: focused ? colors.primary : colors.gray }}>{item.name}</Text>,
+          }}
         />        
       ))}
     </Tab.Navigator>

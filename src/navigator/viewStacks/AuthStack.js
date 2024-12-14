@@ -6,6 +6,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SignInScreen from '../../scenes/auth/SignInViewContainer';
 import ForgotPasswordScreen from '../../scenes/auth/ForgotPasswordViewContainer';
 
+import { colors } from '../../styles';
+
 const RootStack = createNativeStackNavigator();
 
 const AuthStack = (props) => {
@@ -18,7 +20,7 @@ const AuthStack = (props) => {
           options={{
             title: `Sign In`,
             headerStyle: {
-              backgroundColor: '#F0F0F0',
+              backgroundColor: colors.secondary,
             }, 
           }
         }/>
