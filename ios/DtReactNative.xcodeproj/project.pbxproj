@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15A288EF28E513ABBD9A801A /* libPods-DtReactNative-DtReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52419D916CB4A496CD26B397 /* libPods-DtReactNative-DtReactNativeTests.a */; };
 		35DA7F6D3CBF2408377AD5F3 /* libPods-DtReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C096272D5E382A9D0CD525 /* libPods-DtReactNative.a */; };
+		A312014C2D0DBBD8002EB14C /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A312014B2D0DBBD8002EB14C /* Config.xcconfig */; };
 		A3DFF1592CF2C17700B58B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFF1582CF2C17700B58B1B /* AppDelegate.swift */; };
 		A3DFF15B2CF2C17700B58B1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFF15A2CF2C17700B58B1B /* SceneDelegate.swift */; };
 		A3DFF15D2CF2C17700B58B1B /* ReactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DFF15C2CF2C17700B58B1B /* ReactViewController.swift */; };
@@ -45,6 +46,7 @@
 		52419D916CB4A496CD26B397 /* libPods-DtReactNative-DtReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DtReactNative-DtReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		528533403F50AA2ECC4107AF /* Pods-DtReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DtReactNative.release.xcconfig"; path = "Target Support Files/Pods-DtReactNative/Pods-DtReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		5CBFDF4D27B1635EB00B43F8 /* Pods-DtReactNative-DtReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DtReactNative-DtReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-DtReactNative-DtReactNativeTests/Pods-DtReactNative-DtReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
+		A312014B2D0DBBD8002EB14C /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		A3DFF1552CF2C17700B58B1B /* DtReactNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DtReactNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DFF1582CF2C17700B58B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3DFF15A2CF2C17700B58B1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		A3DFF14C2CF2C17700B58B1B = {
 			isa = PBXGroup;
 			children = (
+				A312014B2D0DBBD8002EB14C /* Config.xcconfig */,
 				A3DFF1572CF2C17700B58B1B /* DtReactNative */,
 				A3DFF16E2CF2C17800B58B1B /* DtReactNativeTests */,
 				A3DFF1782CF2C17800B58B1B /* DtReactNativeUITests */,
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3DFF1622CF2C17800B58B1B /* Assets.xcassets in Resources */,
+				A312014C2D0DBBD8002EB14C /* Config.xcconfig in Resources */,
 				A3DFF1652CF2C17800B58B1B /* Base in Resources */,
 				A3DFF1602CF2C17700B58B1B /* Base in Resources */,
 				B0FDDBE755407FD838606F30 /* PrivacyInfo.xcprivacy in Resources */,
@@ -496,6 +500,7 @@
 /* Begin XCBuildConfiguration section */
 		A3DFF17D2CF2C17800B58B1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A312014B2D0DBBD8002EB14C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -565,6 +570,7 @@
 		};
 		A3DFF17E2CF2C17800B58B1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A312014B2D0DBBD8002EB14C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

@@ -11,7 +11,7 @@ class SettingsService extends BaseService {
   }
 
   loadAppSettings = async(): Promise<AppSettings | undefined | any> => {
-    console.log('loadAppSettings');
+
     try {
       const objects = this.realm?.objects('AppSettings');
       if(objects?.isEmpty()) {

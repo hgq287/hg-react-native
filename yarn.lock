@@ -4490,6 +4490,7 @@ __metadata:
     prettier: 2.8.8
     react: 18.3.1
     react-native: 0.76.3
+    react-native-config: ^1.5.3
     react-native-gesture-handler: ~2.20.2
     react-native-keychain: ^9.2.2
     react-native-localize: ^3.3.0
@@ -8638,6 +8639,18 @@ __metadata:
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
   checksum: a904b0fc0a8eeb15a148c9feb7bc17cec7ef96e71188280061fc340043fd6d8ee3ff233381f0e8f95c1cf926210b2c4a31f38182c8f35ac55057e453d6df204f
+  languageName: node
+  linkType: hard
+
+"react-native-config@npm:^1.5.3":
+  version: 1.5.3
+  resolution: "react-native-config@npm:1.5.3"
+  peerDependencies:
+    react-native-windows: ">=0.61"
+  peerDependenciesMeta:
+    react-native-windows:
+      optional: true
+  checksum: 0eb74e0a10ae6e96422671482da83dea16571f4f5ad848d1f18015dccbecb9cbc066788df72a88c630abf4aed0edb7616ec27704817cff18bd6ed7d61979d671
   languageName: node
   linkType: hard
 
