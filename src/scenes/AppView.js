@@ -6,6 +6,5 @@ export default function AppView() {
 
   return (
     <SignInScreen />
-    // <HomeScreen />
   );
 }

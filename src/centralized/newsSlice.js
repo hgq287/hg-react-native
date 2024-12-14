@@ -5,7 +5,7 @@ const initialState = {
 }
 
 export const newsSlice = createSlice({
-  name: 'user',
+  name: 'news',
   initialState,
   reducers: {
     postNews: (
@@ -23,4 +23,4 @@ export const { postNews } = newsSlice.actions;
 
 export default newsSlice.reducer;
 
-export const selectAccessToken = (state) => state.news.newsList;
+export const newsList = (state) => state.news.newsList;

@@ -2,8 +2,8 @@ import {configureStore, combineReducers} from '@reduxjs/toolkit';
 import {persistStore, persistReducer} from 'redux-persist';
 import {reduxStorage} from './storage';
 
-import { homeSlice } from './homeSlice';
-import { authSlice } from './authSlice';
+import { homeSlice } from '../centralized/homeSlice';
+import { authSlice } from '../centralized/authSlice';
 
 const rootReducer = combineReducers({
   'home': homeSlice.reducer,

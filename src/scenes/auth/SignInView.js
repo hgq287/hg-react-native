@@ -14,7 +14,7 @@ import * as Yup from 'yup';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import {useDispatch} from 'react-redux';
-import { setCredentials } from '../../store/authSlice';
+import { setCredentials } from '../../centralized/authSlice';
 
 import {signIn} from '../../core/apis';
 import {setSecureValue} from '../../utils/keyChain';

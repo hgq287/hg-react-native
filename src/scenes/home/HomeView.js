@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, incrementAsync, selectCount } from '../../store/homeSlice';
+import { increment, decrement, incrementAsync, selectCount } from '../../centralized/homeSlice';
 
 import { fonts, colors } from '../../styles';  
 
