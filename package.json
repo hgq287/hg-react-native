@@ -34,6 +34,7 @@
     "react-native-screens": "~4.1.0",
     "react-native-vector-icons": "^10.2.0",
     "react-redux": "^9.1.2",
+    "realm": "^12.14.0",
     "recompose": "^0.30.0",
     "redux-persist": "^6.0.0",
     "yup": "^1.4.0"

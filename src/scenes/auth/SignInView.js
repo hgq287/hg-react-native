@@ -107,7 +107,7 @@ export default function SignInView(props) {
             {errors.password && touched.password && (
               <Text style={styles.errorText}>{errors.password}</Text>
             )}
-            <TouchableOpacity onPress={() => navigation.navigate('Forget')}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('ForgotPassword')}>
               <Text style={styles.forgotPassword}>Forgot Password?</Text>
             </TouchableOpacity>
             <TouchableOpacity

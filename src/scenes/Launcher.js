@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { ActivityIndicator, SafeAreaView, View } from 'react-native';
 
+import { authService } from '../core/services';
+
 const LaunchScreen = (props) => {
   console.log('[LaunchScreen][Log] - Params: ', props.route.params);
-
   const checkForAuthorized = async() => {
     return new Promise((resolve, reject) => {
       (async() => {
