@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import { PersistGate } from 'redux-persist/integration/react';
 import { NavigationContainer } from '@react-navigation/native';
@@ -9,9 +9,12 @@ import { store, persistor } from './src/store/store';
 import AppView from './src/scenes/AppViewContainer';
 
 export default function App() {
+
+  const navigationRef = useRef();
+
   return (
     <Provider store={store}>
-      <NavigationContainer>
+      <NavigationContainer ref={navigationRef}>
         <PersistGate
           loading={
             // eslint-disable-next-line react/jsx-wrap-multilines

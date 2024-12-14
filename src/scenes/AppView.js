@@ -1,10 +1,23 @@
-import React from 'react'; 
-import HomeScreen from '../scenes/home/HomeViewContainer';
-import SignInScreen from '../scenes/auth/SignInViewContainer';
+import React, { useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
+
+import AppNavigator from '../navigator/AppNavigator';
 
 export default function AppView() {
 
+  const navigation = useNavigation();
+
+  useEffect(() => {
+
+    (async() => {
+    })();
+  }, []);
+
   return (
-    <SignInScreen />
+    <>
+      <AppNavigator onNavigationStateChange={() => {
+        console.log('[AppView][Log] - onNavigationStateChange');
+      }} uriPrefix="/app" />
+    </>
   );
 }
