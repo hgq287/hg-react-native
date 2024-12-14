@@ -5,12 +5,23 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { NavigationContainer } from '@react-navigation/native';
 
 import { store, persistor } from './src/store/store';
+import AppSettings from './src/core/models/appSettings';
+import { settingsService } from './src/core/services';
 
 import AppView from './src/scenes/AppViewContainer';
+
 
 export default function App() {
 
   const navigationRef = useRef();
+
+  useEffect(() => {
+
+    (async() => {
+       let appSettings: AppSettings = await settingsService.loadAppSettings();
+       console.log('[App][LOG] - App version: ', appSettings.version);
+    })();
+  }, []);
 
   return (
     <Provider store={store}>

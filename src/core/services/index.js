@@ -3,7 +3,7 @@ import SettingsService from './settingsService';
 import AuthService from './authService';
 console.log('[Realm][Log] - database path: ', realm.path);
 
-export const SettingsService = new SettingsService(
+export const settingsService = new SettingsService(
   realm
 );
 
