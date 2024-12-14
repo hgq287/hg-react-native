@@ -52,6 +52,8 @@ export default function SignInView(props) {
             token: token
           }));
           setSecureValue('token', token);
+
+          props.navigation.navigate('Home');
         }
       })
       .catch(e => {
@@ -65,7 +67,6 @@ export default function SignInView(props) {
   return (
     <View style={styles.container}>
       <Image source={logo} style={styles.logo} />
-      <Text style={styles.title}>Login</Text>
       <Formik
         validationSchema={loginValidationSchema}
         initialValues={{ email: '', password: '' }}

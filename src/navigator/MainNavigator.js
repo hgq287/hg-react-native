@@ -28,6 +28,9 @@ function MainNavigator(props) {
       screenOptions={(props) => ({
         showLabel: false,
         headerShown: true,
+        headerStyle: {
+          backgroundColor: colors.secondary,
+        }
       })}>
       {tabNavigatorData.map((item, idx) => (
         <Tab.Screen 
@@ -36,7 +39,6 @@ function MainNavigator(props) {
           component={item.component}
           initialParams={props.route.params ?? {}}
           options={{
-            backgroundColor: colors.secondary,
             tabBarIcon: ({ focused }) => (
               <View style={styles.container}>
                 {item.icon}
