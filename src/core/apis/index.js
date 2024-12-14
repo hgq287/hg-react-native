@@ -1,7 +1,10 @@
 import {AxiosRequestHeaders} from 'axios';
 import apiClient from './apiClient';
 
-const BASE_URL = 'http://localhost:4106';
+import config from '../../config';
+
+const BASE_URL = config.env.API_BASE_URL;
+const API_NAMESPACE = config.env.API_NAMESPACE;
 
 const contentTypes = {
   json: 'application/json',
@@ -38,8 +41,8 @@ const post = async (
 
 // Routes
 const routes = {
-  signIn: 'v1/signin',
-  signUp: 'v1/signup',
+  signIn: `${API_NAMESPACE}/signin`,
+  signUp: `${API_NAMESPACE}/signup`,
 };
 
 export {routes, get, post};
