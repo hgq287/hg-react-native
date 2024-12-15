@@ -11,7 +11,6 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
-import com.lugg.RNCConfig.RNCConfigPackage;
 
 class MainApplication : Application(), ReactApplication {
 
@@ -21,7 +20,6 @@ class MainApplication : Application(), ReactApplication {
             PackageList(this).packages.apply {
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
-              add(RNCConfigPackage())
             }
 
         override fun getJSMainModuleName(): String = "index"
