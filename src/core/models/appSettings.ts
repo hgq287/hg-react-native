@@ -4,8 +4,8 @@ class AppSettings extends Realm.Object {
   _id!: Realm.BSON.ObjectId;
   version!: string;
   appearance!: string;
-  createdAt!: Date;
-  updatedAt!: Date;
+  createdAt!: date;
+  updatedAt!: date;
   static generate(
     version: string,
     appearance: string,
