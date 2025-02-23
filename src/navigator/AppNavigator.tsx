@@ -1,31 +1,22 @@
 import * as React from 'react';
-import { 
-  View,
-  Text, 
-  StyleSheet, 
-  Image 
-} from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { Button } from '@react-navigation/elements';
 import {
   createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItem,
-  DrawerItemList,
 } from '@react-navigation/drawer';
+
+import { TypeProps } from '../types/types';
 
 import StackNavigator from './StackNavigator';
 
 const Drawer = createDrawerNavigator();
 
-export default AppNavigator = (props) => {
+const AppNavigator = (props: TypeProps) => {
 
   const AppDrawer = () => {
     return (
       <Drawer.Navigator>
-        <Drawer.Screen 
-          name="StackNavigator" 
-          component={StackNavigator} 
+        <Drawer.Screen
+          name="StackNavigator"
+          component={StackNavigator}
           options={{
             headerShown: false,
           }}
@@ -38,3 +29,5 @@ export default AppNavigator = (props) => {
     <AppDrawer />
   )
 }
+
+export default AppNavigator;

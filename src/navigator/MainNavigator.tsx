@@ -1,22 +1,21 @@
 import React, { useEffect } from 'react';
 import {
-  ColorValue, 
-  Text, 
+  ColorValue,
+  Text,
   View,
   StyleSheet
 } from 'react-native';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/Ionicons';
-import {useDispatch} from 'react-redux';
+import { TypeProps } from '../types/types';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useDispatch } from 'react-redux';
 
 import colors from '../styles/colors';
 import tabNavigatorData from './tabNavigatorData';
 
 const Tab = createBottomTabNavigator();
 
-function MainNavigator(props) {
+function MainNavigator(props: TypeProps) {
   console.log('[MainNavigator][Log] - params: ', props.route.params);
   const dispatch = useDispatch();
 
@@ -24,7 +23,7 @@ function MainNavigator(props) {
   }, [dispatch]);
 
   return (
-    <Tab.Navigator 
+    <Tab.Navigator
       screenOptions={(props) => ({
         showLabel: false,
         headerShown: true,
@@ -32,8 +31,8 @@ function MainNavigator(props) {
           backgroundColor: colors.secondary,
         }
       })}>
-      {tabNavigatorData.map((item, idx) => (
-        <Tab.Screen 
+      {tabNavigatorData.map((item) => (
+        <Tab.Screen
           key={item.key}
           name={item.name}
           component={item.component}
@@ -46,7 +45,7 @@ function MainNavigator(props) {
             ),
             tabBarLabel: ({ focused }) => <Text style={{ fontSize: 12, color: focused ? colors.primary : colors.gray }}>{item.name}</Text>,
           }}
-        />        
+        />
       ))}
     </Tab.Navigator>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -11,16 +11,17 @@ import LaunchScreen from '../scenes/Launcher';
 import AuthStack from './viewStacks/AuthStack';
 
 import MainNavigator from './MainNavigator';
+import { TypeProps } from 'src/types/types';
 
 const Stack = createNativeStackNavigator();
-export default function StackNavigator(props) {
+export default function StackNavigator(props: TypeProps) {
 
   console.log('[StackNavigator][Log] - Params: ', props.route.params);
 
   const headerLeftComponentMenu = () => {
     return (
       <TouchableOpacity
-        onPress={() => {}}
+        onPress={() => { }}
         style={{
           paddingHorizontal: 16,
           paddingVertical: 8,
@@ -28,25 +29,25 @@ export default function StackNavigator(props) {
       >
 
         <Icon name="menu-outline" size={25} color="#555" />
-      </TouchableOpacity>    
+      </TouchableOpacity>
     )
   }
   return (
     <SafeAreaProvider>
       <Stack.Navigator screenOptions={{ headerShown: false, animationEnabled: false, gestureEnabled: false }}>
         <Stack.Group>
-          <Stack.Screen 
-            name="Launcher" 
-            component={LaunchScreen} 
-            initialParams={props.route.params ?? {}} 
+          <Stack.Screen
+            name="Launcher"
+            component={LaunchScreen}
+            initialParams={props.route.params ?? {}}
           />
-          <Stack.Screen 
-            name="SignIn" 
-            component={AuthStack} 
-            initialParams={props.route.params ?? {}} 
+          <Stack.Screen
+            name="SignIn"
+            component={AuthStack}
+            initialParams={props.route.params ?? {}}
             options={{
               headerLeft: headerLeftComponentMenu,
-            }} 
+            }}
           />
         </Stack.Group>
         <Stack.Group>
