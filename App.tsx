@@ -18,7 +18,6 @@ export default function App() {
 
     (async () => {
       let appSettings: AppSettings = await settingsService.loadAppSettings();
-      console.log('[App][LOG] - App version: ', appSettings.version);
     })();
   }, []);
 
