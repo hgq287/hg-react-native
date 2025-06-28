@@ -1,6 +1,6 @@
-import HomeScreen from '../scenes/home/HomeViewContainer';
-import ProfileScreen from '../scenes/profile/ProfileViewContainer';
-import NewsScreen from '../scenes/news/NewsViewContainer';
+import HomeScreen from '../scenes/home/HomeView';
+import ProfileScreen from '../scenes/profile/ProfileView';
+import NewsScreen from '../scenes/news/NewsView';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 

@@ -1,6 +1,6 @@
-# dt-react-native
+# hg-react-native
 
-`dt-react-native` is a scalable and production-ready React Native starter kit designed to help you bootstrap mobile apps in just 30 minutes.
+`hg-react-native` is a scalable and production-ready React Native starter kit designed to help you bootstrap mobile apps in just 30 minutes.
 
 This starter template comes with powerful default modules and a clean project structure, making it perfect for launching new projects or maintaining long-term codebases.
 
@@ -25,7 +25,7 @@ This starter template comes with powerful default modules and a clean project st
 #### Project Structure
 
 ```
-dt-react-native/
+hg-react-native/
 ├── src/
 │   ├── components/
 │   ├── constants/
@@ -50,8 +50,8 @@ dt-react-native/
 #### Clone the repo
 
 ```
-git clone https://github.com/hgq287/dt-react-native.git
-cd dt-react-native
+git clone https://github.com/hgq287/hg-react-native.git
+cd hg-react-native
 ```
 
 #### Install dependencies
