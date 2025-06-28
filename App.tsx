@@ -12,6 +12,8 @@ import AppView from './src/scenes/AppView';
 
 export default function App() {
 
+  console.log('App started');
+
   const navigationRef = createNavigationContainerRef<any>();
 
   useEffect(() => {

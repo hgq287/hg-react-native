@@ -3,8 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createNativeStackNavigator} from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import SignInScreen from '../../scenes/auth/SignInViewContainer';
-import ForgotPasswordScreen from '../../scenes/auth/ForgotPasswordViewContainer';
+import SignInScreen from '../../scenes/auth/SignInView';
+import ForgotPasswordScreen from '../../scenes/auth/ForgotPasswordView';
 
 import { colors } from '../../styles';
 
