@@ -1,9 +1,9 @@
 import { Provider } from 'react-redux';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
-import { store } from './src/store/store';
-import AppView from './src/launch/AppView';
+import { store } from '@redux/store';
+import AppView from '@launch/AppView';
 
 export default function App() {
   const navigationRef = useRef<NavigationContainerRef<RootParamList>>(null);

@@ -6,7 +6,6 @@ import {
   StyleSheet
 } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useDispatch } from 'react-redux';
@@ -19,16 +18,11 @@ import { TypeProps } from '../types/types';
 const Tab = createBottomTabNavigator();
 
 function MainNavigator(props: TypeProps) {
+  console.log('[MainNavigator][Log] - MainNavigator mounted:', props);
   const dispatch = useDispatch();
-
-  const headerInfo = {
-    displayName: 'G\'day Hg Q.',
-  }
-
   useEffect(() => {
   }, [dispatch]);
 
-  /// create icon
   const createIcon = (iconName: string, color: ColorValue) => {
     return <Icon name={iconName} size={24} color={color} />;
   }
@@ -42,9 +36,6 @@ function MainNavigator(props: TypeProps) {
         headerBackTitleVisible: false,
         headerStyle: {
           backgroundColor: colors.white,
-          // borderBottomWidth: 1,  // Add a bottom border
-          // borderBottomColor: '#ccc', // Light gray color for the line
-          // backgroundColor: '#fff', // Background color of the header
         },
       })}>
       {tabNavigatorData.map((item, idx) => (
@@ -69,7 +60,6 @@ function MainNavigator(props: TypeProps) {
   );
 }
 
-// local style 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
