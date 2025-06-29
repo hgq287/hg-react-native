@@ -1,39 +1,38 @@
 import React from 'react';
+import {
+  Button,
+  TouchableOpacity
+} from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-
-import SignInScreen from '../../scenes/auth/SignInView';
-import ForgotPasswordScreen from '../../scenes/auth/ForgotPasswordView';
-
-import { colors } from '../../styles';
+import Icon from 'react-native-vector-icons/Ionicons';
+import SignInScreen from '../../features/auth/SignInScreen';
 
 const RootStack = createNativeStackNavigator();
 
-const AuthStack = (props) => {
+const AuthStack = (props: TypeProps) => {
   return (
     <SafeAreaProvider>
       <RootStack.Navigator screenOptions={{ presentation: 'modal' }}>
-        <RootStack.Screen 
-          name="SignIn" 
-          component={SignInScreen} 
+        <RootStack.Screen
+          name="SignIn"
+          component={SignInScreen}
           options={{
-            title: `Sign In`,
+            headerShown: true,
             headerStyle: {
-              backgroundColor: colors.secondary,
-            }, 
+              backgroundColor: '#fff',
+            },
+            title: 'Đăng nhập',
+            headerTitleStyle: { color: '#555', fontSize: 20, fontWeight: '300' },
+            headerBackTitleVisible: false,
+            headerLeft: () => (
+              <TouchableOpacity onPress={() => props.navigation.goBack()} style={{ marginLeft: 0 }}>
+                <Icon name="chevron-back-outline" size={28} color="#555" />
+              </TouchableOpacity>
+            ),
           }
-        }/>
-        <RootStack.Screen 
-          name="ForgotPassword" 
-          component={ForgotPasswordScreen} 
-          options={{
-            title: `Change Password`,
-            headerStyle: {
-              backgroundColor: '#F0F0F0',
-            }, 
-          }
-        }/>
+          } />
       </RootStack.Navigator>
     </SafeAreaProvider>
   );

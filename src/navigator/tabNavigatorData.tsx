@@ -1,27 +1,35 @@
-import HomeScreen from '../scenes/home/HomeView';
-import ProfileScreen from '../scenes/profile/ProfileView';
-import NewsScreen from '../scenes/news/NewsView';
-
+import HomeScreen from '../features/home/HomeScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
+
 
 const tabNavigatorData = [
   {
-    key: 'home',
+    key: 'ROUTES_TAB_HOME',
     name: 'Home',
     component: HomeScreen,
-    icon: <Icon name="calendar-clear-sharp" size={25} color="#666" />,
+    headerShown: true,
+    iconName: 'home-outline',
   },
   {
-    key: 'profile',
-    name: 'Profile',
-    component: ProfileScreen,
-    icon: <Icon name="chatbubble-ellipses-sharp" size={25} color="#666" />,
+    key: 'ROUTES_TAB_CUSTOMERS',
+    name: 'Vận chuyển',
+    headerShown: true,
+    component: HomeScreen,
+    iconName: 'car-outline',
   },
   {
-    key: 'news',
-    name: 'News',
-    component: NewsScreen,
-    icon: <Icon name="settings-sharp" size={25} color="#666" />,
+    key: 'ROUTES_TAB_ORDERS',
+    name: 'Quản lý kho',
+    headerShown: true,
+    component: HomeScreen,
+    iconName: 'bag-handle-outline',
+  },
+  {
+    key: 'ROUTES_TAB_PROFILE',
+    name: 'Tôi',
+    headerShown: false,
+    component: HomeScreen,
+    iconName: 'person-circle-outline',
   },
 ];
 
