@@ -1,6 +1,7 @@
-import HomeScreen from '../features/home/HomeScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import HomeScreen from '@features/home/HomeScreen';
+import ProfileScreen from '@features/profile/ProfileScreen';
 
 const tabNavigatorData = [
   {
@@ -11,24 +12,10 @@ const tabNavigatorData = [
     iconName: 'home-outline',
   },
   {
-    key: 'ROUTES_TAB_CUSTOMERS',
-    name: 'Vận chuyển',
-    headerShown: true,
-    component: HomeScreen,
-    iconName: 'car-outline',
-  },
-  {
-    key: 'ROUTES_TAB_ORDERS',
-    name: 'Quản lý kho',
-    headerShown: true,
-    component: HomeScreen,
-    iconName: 'bag-handle-outline',
-  },
-  {
     key: 'ROUTES_TAB_PROFILE',
-    name: 'Tôi',
+    name: 'Me',
     headerShown: false,
-    component: HomeScreen,
+    component: ProfileScreen,
     iconName: 'person-circle-outline',
   },
 ];

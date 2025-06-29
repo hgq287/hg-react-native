@@ -1,15 +1,20 @@
 import React from 'react';
+import {
+  TouchableOpacity,
+  StyleSheet
+} from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import { Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-// import { Header } from '@react-navigation/elements';
 
 import MainNavigator from './MainNavigator';
-import LaunchScreen from '../launch/Launcher';
+import LaunchScreen from '@launch/Launcher';
 
 import AuthStack from './viewStacks/AuthStack';
+
+import { ROUTES_APP_NAVIGATOR } from '@constants';
+
 const Stack = createNativeStackNavigator();
 export default function StackNavigator(props: TypeProps) {
   console.log('[StackNavigator][Log] - StackNavigator mounted:', props);
@@ -49,7 +54,7 @@ export default function StackNavigator(props: TypeProps) {
         </Stack.Group>
         <Stack.Group>
           <Stack.Screen
-            name="MainNavigator"
+            name={ROUTES_APP_NAVIGATOR}
             component={MainNavigator}
             options={{ headerShown: false, animationEnabled: false, gestureEnabled: false }}
             initialParams={props.route.params ?? {}}

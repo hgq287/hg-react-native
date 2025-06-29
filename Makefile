@@ -10,6 +10,12 @@ ios:
 android:
 	npx react-native run-android
 
+# Stop Metro / build processes
+# Clear Metro bundler cache
+reset-cache:
+	npx react-native start --reset-cache
+
+
 ## Start the Metro bundler only
 start:
 	npx react-native start

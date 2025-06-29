@@ -26,7 +26,6 @@
     "react-native-config": "^1.5.5",
     "react-native-gesture-handler": "^2.26.0",
     "react-native-keychain": "^10.0.0",
-    "react-native-mmkv": "^3.3.0",
     "react-native-reanimated": "^3.18.0",
     "react-native-safe-area-context": "^5.5.0",
     "react-native-screens": "^4.11.1",
