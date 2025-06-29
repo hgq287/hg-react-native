@@ -6,41 +6,59 @@ import {
   StyleSheet
 } from 'react-native';
 
-import { TypeProps } from '../types/types';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { useDispatch } from 'react-redux';
 
 import colors from '../styles/colors';
 import tabNavigatorData from './tabNavigatorData';
+import { TypeProps } from '../types/types';
+
 
 const Tab = createBottomTabNavigator();
 
 function MainNavigator(props: TypeProps) {
-  console.log('[MainNavigator][Log] - params: ', props.route.params);
   const dispatch = useDispatch();
+
+  const headerInfo = {
+    displayName: 'G\'day Hg Q.',
+  }
 
   useEffect(() => {
   }, [dispatch]);
+
+  /// create icon
+  const createIcon = (iconName: string, color: ColorValue) => {
+    return <Icon name={iconName} size={24} color={color} />;
+  }
 
   return (
     <Tab.Navigator
       screenOptions={(props) => ({
         showLabel: false,
-        headerShown: true,
+        headerShown: false,
+        headerTitleStyle: { color: 'white', fontSize: 22, fontWeight: '300' },
+        headerBackTitleVisible: false,
         headerStyle: {
-          backgroundColor: colors.secondary,
-        }
+          backgroundColor: colors.white,
+          // borderBottomWidth: 1,  // Add a bottom border
+          // borderBottomColor: '#ccc', // Light gray color for the line
+          // backgroundColor: '#fff', // Background color of the header
+        },
       })}>
-      {tabNavigatorData.map((item) => (
+      {tabNavigatorData.map((item, idx) => (
         <Tab.Screen
           key={item.key}
-          name={item.name}
+          name={item.key}
           component={item.component}
           initialParams={props.route.params ?? {}}
           options={{
+            title: item.name,
+            headerShown: item.headerShown,
             tabBarIcon: ({ focused }) => (
               <View style={styles.container}>
-                {item.icon}
+                {createIcon(item.iconName, focused ? colors.primary : colors.gray)}
               </View>
             ),
             tabBarLabel: ({ focused }) => <Text style={{ fontSize: 12, color: focused ? colors.primary : colors.gray }}>{item.name}</Text>,

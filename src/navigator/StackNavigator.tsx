@@ -1,27 +1,24 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Image, StyleSheet, TouchableOpacity } from 'react-native';
+// import { Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Header } from '@react-navigation/elements';
-
-import LaunchScreen from '../scenes/Launcher';
-
-import AuthStack from './viewStacks/AuthStack';
+// import { Header } from '@react-navigation/elements';
 
 import MainNavigator from './MainNavigator';
-import { TypeProps } from 'src/types/types';
+import LaunchScreen from '../launch/Launcher';
 
+import AuthStack from './viewStacks/AuthStack';
 const Stack = createNativeStackNavigator();
 export default function StackNavigator(props: TypeProps) {
-
-  console.log('[StackNavigator][Log] - Params: ', props.route.params);
-
+  console.log('[StackNavigator][Log] - StackNavigator mounted:', props);
   const headerLeftComponentMenu = () => {
     return (
       <TouchableOpacity
-        onPress={() => { }}
+        onPress={() => {
+          console.log('[StackNavigator][Log] - Menu button pressed');
+        }}
         style={{
           paddingHorizontal: 16,
           paddingVertical: 8,
@@ -37,7 +34,7 @@ export default function StackNavigator(props: TypeProps) {
       <Stack.Navigator screenOptions={{ headerShown: false, animationEnabled: false, gestureEnabled: false }}>
         <Stack.Group>
           <Stack.Screen
-            name="Launcher"
+            name="LaunchScreen"
             component={LaunchScreen}
             initialParams={props.route.params ?? {}}
           />
@@ -52,7 +49,7 @@ export default function StackNavigator(props: TypeProps) {
         </Stack.Group>
         <Stack.Group>
           <Stack.Screen
-            name="Home"
+            name="MainNavigator"
             component={MainNavigator}
             options={{ headerShown: false, animationEnabled: false, gestureEnabled: false }}
             initialParams={props.route.params ?? {}}
