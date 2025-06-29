@@ -15,7 +15,7 @@ import { setCredentials } from '@redux/slices/authSlice';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/Feather';
 import { colors } from '@styles';
 
 import { signIn } from '@core/apis';
@@ -65,6 +65,11 @@ export default function SignInView(props) {
       });
   };
 
+  const handleForgotPassword = () => {
+    // Handle forgot password logic here
+    console.log('Forgot Password Pressed');
+  };
+
   return (
     <View style={styles.container}>
       <Image source={logo} style={styles.logo} />
@@ -84,7 +89,7 @@ export default function SignInView(props) {
         }) => (
           <>
             <View style={styles.inputContainer}>
-              <Icon name="mail-outline" size={25} style={styles.icon} />
+              <Icon name="mail" size={25} style={styles.icon} />
               <TextInput
                 style={styles.input}
                 placeholder="Email"
@@ -95,10 +100,10 @@ export default function SignInView(props) {
               />
             </View>
             {errors.email && touched.email && (
-              <Text style={styles.errorText}>{errors.email}</Text>
+              <Icon name="camera" size={30} color="#333" />
             )}
             <View style={styles.inputContainer}>
-              <Icon name="lock-closed-outline" size={25} style={styles.icon} />
+              <Icon name="lock" size={25} style={styles.icon} />
               <TextInput
                 style={styles.input}
                 placeholder="Password"
@@ -111,7 +116,7 @@ export default function SignInView(props) {
             {errors.password && touched.password && (
               <Text style={styles.errorText}>{errors.password}</Text>
             )}
-            <TouchableOpacity onPress={() => props.navigation.navigate('ForgotPassword')}>
+            <TouchableOpacity onPress={() => handleForgotPassword()}>
               <Text style={styles.forgotPassword}>Forgot Password?</Text>
             </TouchableOpacity>
             <TouchableOpacity
