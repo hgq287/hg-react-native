@@ -44,7 +44,7 @@ const LaunchScreen = (props: TypeProps) => {
           <Text style={styles.icon}>🔒</Text>
           <Text style={styles.title}> Wellcome to the App </Text>
           <Text style={styles.subtitle}>
-            to access the app features. Please log in to continue.
+            To access the app features. Please log in to continue.
           </Text>
           <TouchableOpacity style={styles.button} onPress={handleLoginPress}>
             <Text style={styles.buttonText}>Sign In</Text>
