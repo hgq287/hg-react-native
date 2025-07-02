@@ -1,10 +1,13 @@
-import {AxiosRequestHeaders} from 'axios';
+import { AxiosRequestHeaders } from 'axios';
 import apiClient from './apiClient';
 
 import config from '../../config';
 
 const BASE_URL = config.env.API_BASE_URL;
 const API_NAMESPACE = config.env.API_NAMESPACE;
+
+console.log('API_BASE_URL:', BASE_URL);
+console.log('API_NAMESPACE:', API_NAMESPACE);
 
 const contentTypes = {
   json: 'application/json',
@@ -19,9 +22,9 @@ const get = (route) => {
 // Base function for POST requests
 const post = async (
   route,
-  {body, type = 'json', user = {}},
+  { body, type = 'json', user = {} },
 ) => {
-  let headers = {Accept: 'application/json'};
+  let headers = { Accept: 'application/json' };
   headers.Accept = 'application/json';
   if (user.token) {
     headers.Authorization = `Bearer ${user.token}`;
@@ -45,6 +48,6 @@ const routes = {
   signUp: `${API_NAMESPACE}/signup`,
 };
 
-export {routes, get, post};
+export { routes, get, post };
 
-export {signIn, signUp} from './apiAuth';
+export { signIn, signUp } from './apiAuth';

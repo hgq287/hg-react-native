@@ -20,6 +20,7 @@ import { colors } from '@styles';
 
 import { signIn } from '@core/apis';
 import { setSecureValue } from '@utils/keyChain';
+import { ROUTES_HOME, ROUTES_APP_NAVIGATOR } from '@constants';
 
 const logo = require('@assets/images/logo.png');
 
@@ -54,7 +55,7 @@ export default function SignInView(props) {
           }));
           setSecureValue('token', token);
 
-          props.navigation.navigate('Home');
+          props.navigation.navigate(ROUTES_APP_NAVIGATOR);
         }
       })
       .catch(e => {
