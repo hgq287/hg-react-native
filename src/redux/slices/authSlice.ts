@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  email: null,
-  password: null,
+  user: null,
   token: null,
 }
 
@@ -16,9 +15,9 @@ export const authSlice = createSlice({
         payload: { user = {}, token },
       },
     ) => {
+      console.log('[authSlice] - setCredentials', { user, token });
       state.token = token;
-      state.email = user.email;
-      state.email = user.password;
+      state.user = user;
     },
   },
 })

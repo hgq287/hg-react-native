@@ -44,8 +44,8 @@ const post = async (
 
 // Routes
 const routes = {
-  signIn: `${API_NAMESPACE}/signin`,
-  signUp: `${API_NAMESPACE}/signup`,
+  signIn: `${API_NAMESPACE}/accounts/signin`,
+  signUp: `${API_NAMESPACE}/accounts/signup`,
 };
 
 export { routes, get, post };
