@@ -1,21 +1,37 @@
 import Realm from 'realm'
 
-class Credentials extends Realm.Object  {
+class Credentials extends Realm.Object {
   _id!: Realm.BSON.ObjectId;
-  accessToken!: string;
-  refreshToken!: string;
+  type!: string; // 'BearerToken' | 'ApiKey' | 'BasicAuth' | 'Custom'
+  uid?: string;  // Firebase UID or similar
+  idToken?: string;  // The JWT access token (aka idToken)
+  refreshToken?: string;
+  apiKey?: string;
+  username?: string;
+  password?: string;
+  deviceId?: string;
+  signature?: string;
+  expiresAt?: Date;
   createdAt!: Date;
   updatedAt!: Date;
-  static generate(
-    accessToken: string,
-    refreshToken: string,
-  ) {
+
+  static generate(data: {
+    type: string,
+    uid?: string,
+    idToken?: string,
+    refreshToken?: string,
+    apiKey?: string,
+    username?: string,
+    password?: string,
+    deviceId?: string,
+    signature?: string,
+    expiresAt?: Date
+  }) {
     return {
       _id: new Realm.BSON.ObjectId(),
-      accessToken: accessToken,
-      refreshToken: refreshToken,
       createdAt: new Date(),
       updatedAt: new Date(),
+      ...data
     };
   }
 
@@ -24,11 +40,19 @@ class Credentials extends Realm.Object  {
     primaryKey: '_id',
     properties: {
       _id: 'objectId',
-      accessToken: 'string',
-      refreshToken: 'string',
+      type: 'string',
+      uid: 'string?',
+      idToken: 'string?',
+      refreshToken: 'string?',
+      apiKey: 'string?',
+      username: 'string?',
+      password: 'string?',
+      deviceId: 'string?',
+      signature: 'string?',
+      expiresAt: 'date?',
       createdAt: 'date',
       updatedAt: 'date'
-    },
+    }
   };
 }
 

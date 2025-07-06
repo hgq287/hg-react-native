@@ -9,6 +9,8 @@ import {
   Image
 } from 'react-native';
 
+import { authService } from '@core/services';
+
 import { useDispatch } from 'react-redux';
 import { setCredentials } from '@redux/slices/authSlice';
 
@@ -19,7 +21,6 @@ import Icon from 'react-native-vector-icons/Feather';
 import { colors } from '@styles';
 
 import { signIn } from '@core/apis';
-import { setSecureValue } from '@utils/keyChain';
 import { ROUTES_HOME, ROUTES_APP_NAVIGATOR } from '@constants';
 
 const logo = require('@assets/images/logo.png');
@@ -47,15 +48,33 @@ export default function SignInView(props) {
   const handleLogin = (values: ValuesType, { setErrors }: any) => {
     signIn(values)
       .then(res => {
-        if (res.data?.user?.token) {
-          const { email, username, token } = res.data.user;
-          dispatch(setCredentials({
-            user: { email: email, username: username },
-            token: token
-          }));
-          setSecureValue('token', token);
+        const { uid, idToken, refreshToken } = res.data;
+        let expiresAt: Date | undefined;
+        console.log('[SignInView] - Login response:', idToken);
 
-          props.navigation.navigate(ROUTES_APP_NAVIGATOR);
+        if (idToken) {
+          (async () => {
+            await authService.saveCredentials({
+              type: 'BearerToken',
+              uid,
+              idToken,
+              refreshToken,
+            }).then(() => {
+              console.log('[SignInView] - Credentials saved successfully');
+              dispatch(setCredentials({
+                user: {
+                  uid: uid,
+                  email: values.email,
+                },
+                token: idToken,
+              }));
+
+              props.navigation.reset({
+                index: 0,
+                routes: [{ name: ROUTES_APP_NAVIGATOR }],
+              });
+            });
+          })();
         }
       })
       .catch(e => {

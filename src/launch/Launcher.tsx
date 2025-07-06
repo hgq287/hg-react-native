@@ -25,7 +25,19 @@ const LaunchScreen = (props: TypeProps) => {
 
   useEffect(() => {
     (async () => {
-      props.navigation.navigate(ROUTES_SIGNIN);
+
+      authService.checkForAuthorized()
+        .then((data) => {
+          dispatch(setCredentials(data.credentials));
+          props.navigation.reset({
+            index: 0,
+            routes: [{ name: ROUTES_APP_NAVIGATOR }],
+          });
+        })
+        .catch(() => {
+          // If not authorized, navigate to SignIn screen
+          console.log('[LaunchScreen] - Not authorized, navigating to SignIn');
+        });
     })();
   }, []);
 
