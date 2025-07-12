@@ -28,14 +28,14 @@ const ProfileScreen = () => {
       </View>
 
       <Image
-        source={profilePic}
+        source={user.avatar || profilePic}
         style={styles.profilePic}
       />
 
-      <Text style={styles.name}>Hg Q.</Text>
-      <Text style={styles.username}>@hgq287</Text>
+      <Text style={styles.name}>{user.displayName}</Text>
+      <Text style={styles.username}>@{user.username}</Text>
       <Text style={styles.bio}>
-        Mobile App Solutions Architect & Open Source Enthusiast
+        {user.bio}
       </Text>
 
       <Option icon={<Ionicons name="lock-closed-outline" size={20} />} label="Privacy" />
@@ -58,7 +58,7 @@ const Option = ({ icon, label }) => (
 
 const styles = StyleSheet.create({
   container: {
-    padding: 0,
+    paddingHorizontal: 20,
     alignItems: 'center',
   },
   profilePic: {

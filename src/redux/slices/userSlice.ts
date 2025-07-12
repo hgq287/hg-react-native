@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const profilePic = require('@assets/images/profile-pic.png');
 const initialState = {
   email: null,
   password: null,
-  username: null,
-  bio: null,
-  avatar: null,
+  username: "hgq287",
+  displayName: "Hg Q.",
+  bio: "Mobile App Solutions Architect & Open Source Enthusiast",
+  avatar: profilePic,
 }
 
 export const userSlice = createSlice({
@@ -21,8 +23,6 @@ export const userSlice = createSlice({
       state.email = user.email;
       state.username = user.username;
       state.password = user.password;
-      state.bio = user.bio;
-      state.avatar = user.avatar;
     },
   },
 })
