@@ -57,7 +57,7 @@ cd hg-react-native
 #### Install dependencies
 
 ```
-yarn install
+npm install
 ```
 
 #### Set up environment
@@ -71,8 +71,8 @@ then, modify .env as needed (API base URL, environment keys, etc.)
 #### Run the app
 
 ```
-yarn ios      # for iOS
-yarn android  # for Android
+npm run ios      # for iOS
+npm run android  # for Android
 ```
 
 ## What’s Inside
