@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- Upgrade `react-native` to `0.79.0`
+- Upgrade `react-native` to `0.80.0`
 - Upgrade `@reduxjs/toolkit` to `2.8.2`
 - Upgrade `react-native-safe-area-context` to `5.5.0`
 - Upgrade `react-native-screens` to `4.11.1`
