@@ -75,6 +75,12 @@ npm run ios      # for iOS
 npm run android  # for Android
 ```
 
+#### Run unit-tests
+
+```bash
+npx jest
+```
+
 ## What’s Inside
 
 - React Native (latest version)
