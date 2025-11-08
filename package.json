@@ -48,6 +48,8 @@
     "@react-native/eslint-config": "0.80.0",
     "@react-native/metro-config": "0.80.0",
     "@react-native/typescript-config": "0.80.0",
+    "@testing-library/jest-native": "^5.4.3",
+    "@tsconfig/react-native": "^3.0.7",
     "@types/jest": "^29.5.14",
     "@types/react": "^19.1.0",
     "@types/react-test-renderer": "^19.1.0",
