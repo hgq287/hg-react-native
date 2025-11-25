@@ -13,3 +13,10 @@ All notable changes to this project will be documented in this file.
 - Upgrade `react-native-safe-area-context` to `5.5.0`
 - Upgrade `react-native-screens` to `4.11.1`
 - Upgrade `react-native-reanimated` to `3.18.0`
+
+## [0.0.1] - Nov 25, 2025
+
+### Changed
+
+- Upgrade `react-native` to `0.82.1`
+- Upgrade `@react-native/metro-config` to `^0.82.1`
