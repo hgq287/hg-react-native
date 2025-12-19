@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.hgreactnative"
+    namespace "com.HGReactNative"
     defaultConfig {
-        applicationId "com.hgreactnative"
+        applicationId "com.HGReactNative"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
