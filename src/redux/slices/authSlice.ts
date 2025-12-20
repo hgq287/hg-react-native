@@ -26,4 +26,4 @@ export const { setCredentials } = authSlice.actions;
 
 export default authSlice.reducer;
 
-export const selectAccessToken = (state) => state.auth.token;
+export const selectAccessToken = (state: any) => state.auth.token;

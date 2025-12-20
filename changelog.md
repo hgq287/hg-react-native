@@ -20,3 +20,10 @@ All notable changes to this project will be documented in this file.
 
 - Upgrade `react-native` to `0.82.1`
 - Upgrade `@react-native/metro-config` to `^0.82.1`
+
+## [0.0.1] - Dec 20, 2025
+
+### Changed
+
+- Upgrade `react-native` to `0.83.1`
+- Update dependencies to ensure compatibility with `react-native` v0.83.1
