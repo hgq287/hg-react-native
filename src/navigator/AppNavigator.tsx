@@ -4,7 +4,7 @@ import {
 } from '@react-navigation/drawer';
 
 import StackNavigator from './StackNavigator';
-import { TypeProps } from '@types/types';
+import { TypeProps } from '../types/types';
 
 const Drawer = createDrawerNavigator();
 
