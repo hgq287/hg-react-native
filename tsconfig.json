@@ -46,7 +46,23 @@
     // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */
     // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
     "baseUrl": "./", /* Base directory to resolve non-absolute module names. */
-    "paths": {}
+    "paths": {
+      "@assets/*": ["./assets/*"],
+      "@src/*": ["./src/*"],
+      "@launch/*": ["./src/launch/*"],
+      "@types/*": ["./src/types/*"],
+      "@components/*": ["./src/components/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@features/*": ["./src/features/*"],
+      "@core/*": ["./src/core/*"],
+      "@services/*": ["./src/core/services/*"],
+      "@models/*": ["./src/core/models/*"],
+      "@apis/*": ["./src/core/apis/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@navigator/*": ["./src/navigator/*"],
+    }
   },
   "exclude": [
     "node_modules",
